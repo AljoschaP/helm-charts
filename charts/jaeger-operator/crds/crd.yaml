@@ -24,8 +24,6 @@ spec:
     plural: jaegers
     singular: jaeger
   scope: Namespaced
-  subresources:
-    status: {}
   versions:
     - name: v1
       served: true
