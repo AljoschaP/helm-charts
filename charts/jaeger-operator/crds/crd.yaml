@@ -8,15 +8,6 @@ metadata:
   labels:
     app: jaeger-operator
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.phase
-    description: Jaeger instance's status
-    name: Status
-    type: string
-  - JSONPath: .status.version
-    description: Jaeger Version
-    name: Version
-    type: string
   group: jaegertracing.io
   names:
     kind: Jaeger
@@ -32,3 +23,12 @@ spec:
         openAPIV3Schema:
           type: object
           x-kubernetes-preserve-unknown-fields: true
+      additionalPrinterColumns:
+      - jsonPath: .status.phase
+        description: Jaeger instance's status
+        name: Status
+        type: string
+      - jsonPath: .status.version
+        description: Jaeger Version
+        name: Version
+        type: string
